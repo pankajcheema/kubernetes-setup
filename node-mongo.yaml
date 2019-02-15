@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-emp1
+  labels:
+    run: my-emp1
+spec:
+  ports:
+  - port: 80
+    targetPort: 8888
+    protocol: TCP
+type: NodePort
+selector:
+  run: my-emp1
+
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: my-emp1
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-emp1
+    spec:
+      containers:
+      - name: my-emp1
+        image: kavisuresh/employee1
+        ports:
+        - containerPort: 8888
+      - name: mongo
+        image: mongo
+        ports:
+        - containerPort: 27017
