@@ -23,7 +23,7 @@ spec:
             - containerPort: 27017
           volumeMounts:
             - name: data
-              mountPath: $HOME/per_volumes/data/db
+              mountPath: /home/docker/per_volumes/data/db
       volumes:
         - name: data
           persistentVolumeClaim:

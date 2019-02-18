@@ -1,7 +1,7 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: mongo-pv-volume1
+  name: mongo-pv-volume
   labels:
     type: local
 spec:
@@ -13,4 +13,4 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "$HOME/per_volumes"
+    path: "/home/docker/per_volumes"
