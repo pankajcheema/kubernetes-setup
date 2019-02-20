@@ -6,7 +6,7 @@ metadata:
     app: node
     tier: backend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 3000
       nodePort: 30005
