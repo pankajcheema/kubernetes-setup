@@ -13,6 +13,6 @@ spec:
   externalIPs:
     - 34.73.154.127 
   # # Replace with the IP of your minikube node / master node
-  # selector:
-  #   app: node
-  #   tier: backend
+  selector:
+    app: node
+    tier: backend
