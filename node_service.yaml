@@ -10,7 +10,7 @@ spec:
   ports:
     - port: 8080
       targetPort: 3000
-  # Replace with the IP of your minikube node / master node
-  selector:
-    app: node
-    tier: backend
+  # # Replace with the IP of your minikube node / master node
+  # selector:
+  #   app: node
+  #   tier: backend
